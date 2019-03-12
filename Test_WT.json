@@ -1,0 +1,27 @@
+[{
+		"firstname": "Lekha",
+		"lastname": "Reddy",
+		"age": 20,
+		"marks": [{
+				"english": 23
+			},
+			{
+				"mathematics": 28
+			}
+		],
+		"address": "hyd"
+	},
+	{
+		"firstname": "Jyoshna",
+		"lastname": "Chennoju",
+		"age": 19,
+		"marks": [{
+				"english": 23
+			},
+			{
+				"mathematics": 28
+			}
+		],
+		"address": "nagole"
+	}
+]
