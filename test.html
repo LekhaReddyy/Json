@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script>
+			function test()
+			{
+				var t="";
+				var ajax=new XMLHttpRequest();
+				var result=document.getElementById("result");
+				ajax.open("get","https://raw.githubusercontent.com/LekhaReddyy/Json/master/Test_WT.json");
+				ajax.onload=function()
+				{
+					console.log(ajax.responseText);
+					var data=JSON.parse(ajax.responseText);
+					var t =t+"<table border='1'>"
+					for(var i=0;i<data.length;i++)
+					{
+					t =t+"<tr><td>"+data[i].firstname+"</td><td>"+data[i].lastname+"</td></tr>";
+					}
+					
+					t=t+"</table>";
+					result.innerHTML=t;
+				}
+				ajax.onerror=function()
+				{
+					alert("Connection failed");	
+				}
+ 				
+				ajax.send();
+			}
+		</script>
+		</head>
+	<body>
+	<input type="button" value="get JSON" onclick="test();">
+	<p id="result"></p>
+	</body>
+</html>
